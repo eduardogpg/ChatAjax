@@ -1,0 +1,278 @@
+/*
+YUI 3.14.1 (build 63049cb)
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+body {
+	font-family:  Calibri, Arial;
+	background: url(fondo1.jpg);
+	background-size: 100%;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #316796;
+	font-weight: bold;
+}
+#contm {
+	width: 20%;
+	float: left;
+}
+#cont {
+	width: 80%;
+	display: inline-block;
+	position: relative;
+}
+#todo {
+	width: 95%;
+
+}
+#finfo {
+	background: #272727;
+	opacity: 0.2;
+	border-radius: 10px;
+	display: block;
+	margin-top: 20px;
+	width: 100%;
+	height: 92%;
+}
+#info {
+	z-index: 30;
+	position: absolute;
+	top: 40px;
+	left: 20px;
+	width: 100%;
+}
+#textoabajo {
+	text-align: right;
+	width: 90%;
+	margin-right: 100px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+#textoabajo span {
+	padding: 0 10px;
+	border-left: 1px solid #ddd;
+}
+#txteliminar {
+	
+	display: inline-block;
+	cursor: pointer;
+}
+#pestana ul li {
+	display: inline-block;
+	padding: 5px 10px;
+	background-image: linear-gradient(to top, #616161  0%, #8b8888 50%);
+	background: -ms-linear-background(top, #616161 , #8b8888);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#616161 ),  to(#8b8888)); 
+	background: -moz-linear-gradient(top, #616161 , #8b8888);
+	background: linear-gradient(top, #616161 , #8b8888);
+	background: -o-linear-background(top, #616161 , #8b8888);
+	background: -webkit-linear-gradient(top, #616161 , #8b8888);
+	border: 1px solid #000;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	margin-right: 3px;
+}
+#pestana ul li #menu {
+	position: absolute;
+	left: 0;
+	top: 29px;
+	border: 1px solid #777;
+}
+#pestana ul li #menu li {
+	display: block;
+	background: #ccc;
+	padding: 5px 10px;
+	font-size: 11px;
+	color: #000;
+	border-radius: 0;
+	width: 60px;
+}
+#pestana ul li #menu li:hover {
+	background: #ddd;
+}
+#pestana ul .s {
+	background-image: linear-gradient(to top, #272727 0%, #434343 50%);
+	background: -ms-linear-background(top, #272727, #434343);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#272727),  to(#434343)); 
+	background: -moz-linear-gradient(top, #272727, #434343);
+	background: linear-gradient(top, #272727, #434343);
+	background: -o-linear-background(top, #272727, #434343);
+	background: -webkit-linear-gradient(top, #272727, #434343);
+}
+.chat {
+	border: 1px solid #777;
+	padding: 10px;
+	width: 90%;
+	height: 430px;
+	overflow: auto;
+	display: none;
+	background: #fcfcfc
+}
+.activo {
+	display: block !important;
+}
+#write {
+	width: 90%;
+	padding: 10px;
+	background: #f1f1f1;
+
+	border: 1px solid #777;
+	border-top: none;
+}
+#write textarea {
+	width: 80%;
+	height: 60px;
+	border-radius: 10px;
+	padding: 10px;
+}
+#write input {
+	width: 17%;
+	float: right;
+	height: 60px;
+	border-radius: 10px;
+	border: 1px solid #777;
+}
+.chat .mensaje {
+	border-bottom: 1px dashed #ccc;
+	padding: 10px 0;
+	color: #999;
+}
+.chat .mensaje span {
+	color: #000;
+	display: block;
+}
+.usuarios {
+	width: 160px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #272727;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+.usuarios .new {
+	background: #777;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	margin: 20px 0;
+	border: 1px solid #777;
+	border-radius: 10px;	
+	cursor: pointer;
+}
+.usuarios .select {
+	background: #000;
+}
+.usuarios h2 {
+	color: #fff;
+	font-size: 16px;
+	padding: 10px;
+}
+.usuarios ul {
+	height: 585px;
+	overflow: auto;
+	display: none;
+}
+.usuarios ul.ver {
+	display: block;
+}
+.usuarios ul li {
+	padding: 7px 10px;
+	border-bottom: 1px solid #777;
+	cursor: pointer;
+	background: url(muneco2.png) no-repeat 10px 5px;
+	padding-left: 35px;
+	color: #ccc;
+	font-size: 12px;
+}
+.usuarios ul li:hover, .usuarios ul .sel {
+	background: #000 url(muneco.png) no-repeat 10px 5px;
+	color: #fff;
+}
+#black {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+#login {
+	position: absolute;
+	z-index: 99;
+	width: 300px;
+	height: 160px;
+	margin-top: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	padding: 40px;
+}
+#login label {
+	font-size: 12px;
+
+	width: 100%;
+	display: inline-block;
+	padding-top: 20px;
+	margin-bottom: 10px;
+}
+#login #nombre {
+	padding: 5px 10px;
+	width: 100%;
+}
+#login #snombre {
+	text-align: center;
+	padding: 5px;
+	margin-top: 5px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+#realizado,#realizado2 {
+	font-size: 12px;
+}
+#realizado2 {
+	margin-top: 10px;
+}
+.degradadoGris { 
+	background-image: linear-gradient(to top, #fff 0%, #f9f9f9 50%);
+	background: -ms-linear-background(top, #fff, #f9f9f9);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff),  to(#f9f9f9)); 
+	background: -moz-linear-gradient(top, #fff, #f9f9f9);
+	background: linear-gradient(top, #fff, #f9f9f9);
+	background: -o-linear-background(top, #fff, #f9f9f9);
+	background: -webkit-linear-gradient(top, #fff, #f9f9f9);
+}
+@media screen and (max-height: 600px){
+	.usuarios ul {
+		height: 430px;
+	}
+	.chat {
+		height: 280px;
+	}
+	#login {
+		margin-top: 100px;
+	}
+}
+@media screen and (max-width: 800px){
+	body {
+		overflow: hidden;
+	}
+	#contm {
+		width: 25%;
+	}
+	#cont {
+		width: 75%;
+	}
+	#todo {
+		width: 97%;
+	}
+}
